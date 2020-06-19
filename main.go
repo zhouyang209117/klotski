@@ -40,20 +40,21 @@ func returnRequest(w http.ResponseWriter, result model.Result) {
 	w.Write(js)
 }
 func handler(w http.ResponseWriter, req *http.Request) {
-	log.Println("call handler")
+	log.Println("call handler,ip:", req.RemoteAddr)
+	w.Header().Set("Access-Control-Allow-Origin","*")
 	s := model.ClientState{}
 	result := model.Result{}
 	result.Success = false
 	body, err := ioutil.ReadAll(req.Body)
 	if err != nil {
-		log.Fatal("readAll error", err.Error())
+		log.Println("readAll error", err.Error())
 		returnRequest(w, result)
 		return
 	}
 	log.Println("body content:", string(body))
 	err = json.Unmarshal(body, &s)
 	if err != nil {
-		log.Fatal("Unmarshal error", err.Error())
+		log.Println("Unmarshal error", err.Error())
 		returnRequest(w, result)
 		return
 	}
@@ -64,7 +65,7 @@ func handler(w http.ResponseWriter, req *http.Request) {
 	if success {
 		c := steps.Front()
 		if c == nil {
-			log.Fatal("状态异常")
+			log.Println("状态异常")
 			result.Success = false
 		} else {
 			resultSteps := make([]model.ResultStep, 0)
@@ -98,6 +99,6 @@ func main()  {
 	log.Println("server is running, port:", port)
 	err = http.ListenAndServe(fmt.Sprintf(":%d", port), nil)
 	if err != nil {
-		log.Fatal("start server error")
+		log.Fatal("start server error", err)
 	}
 }

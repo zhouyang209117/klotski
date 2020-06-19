@@ -43,7 +43,7 @@ const (
 	CC_EN_NAME = "caocao"
 	MC_EN_NAME = "machao"
 	ZY_EN_NAME = "zhaoyun"
-	GY_EN_NAME = "guoyu"
+	GY_EN_NAME = "guanyu"
 	HZ_EN_NAME = "huangzhong"
 	B1_EN_NAME = "bing1"
 	B2_EN_NAME = "bing2"
