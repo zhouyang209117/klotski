@@ -17,7 +17,7 @@ func getHenDaoLiMa() model.ClientState {
 	r := model.ClientState{}
 	r.ZhangFei = model.Coord{X: 0, Y: 0}
 	r.Caocao = model.Coord{X: 0, Y: 1}
-	r.MaoCho = model.Coord{X: 0, Y: 3}
+	r.MaCho = model.Coord{X: 0, Y: 3}
 	r.ZhaoYun = model.Coord{X: 2, Y: 0}
 	r.GuangYu = model.Coord{X: 2, Y: 1}
 	r.HuangZhong = model.Coord{X: 2, Y: 3}
@@ -34,7 +34,7 @@ func getSimple1() model.ClientState {
 	r := model.ClientState{}
 	r.ZhangFei = model.Coord{X: 0, Y: 0}
 	r.Caocao = model.Coord{X: 2, Y: 1}
-	r.MaoCho = model.Coord{X: 0, Y: 3}
+	r.MaCho = model.Coord{X: 0, Y: 3}
 	r.ZhaoYun = model.Coord{X: 2, Y: 0}
 	r.GuangYu = model.Coord{X: 1, Y: 1}
 	r.HuangZhong = model.Coord{X: 3, Y: 3}

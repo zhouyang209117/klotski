@@ -17,7 +17,7 @@ func getStartState(s model.ClientState) model.State {
 	state := model.State {}
 	state.SetCoord(constant.ZHANG_FEI, s.ZhangFei.X, s.ZhangFei.Y)
 	state.SetCoord(constant.CAO_CAO, s.Caocao.X, s.Caocao.Y)
-	state.SetCoord(constant.MA_CHAO, s.MaoCho.X, s.MaoCho.Y)
+	state.SetCoord(constant.MA_CHAO, s.MaCho.X, s.MaCho.Y)
 	state.SetCoord(constant.ZHAO_YUN, s.ZhaoYun.X, s.ZhaoYun.Y)
 	state.SetCoord(constant.GUAN_YU, s.GuangYu.X, s.GuangYu.Y)
 	state.SetCoord(constant.HUANG_ZHONG, s.HuangZhong.X, s.HuangZhong.Y)

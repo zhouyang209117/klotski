@@ -14,7 +14,7 @@ type Result struct {
 type ClientState struct {
 	ZhangFei   Coord `json:"zhangfei"`
 	Caocao     Coord `json:"caocao"`
-	MaoCho     Coord `json:"maochao"`
+	MaCho      Coord `json:"machao"`
 	ZhaoYun    Coord `json:"zhaoyun"`
 	GuangYu    Coord `json:"guanyu"`
 	HuangZhong Coord `json:"huangzhong"`
